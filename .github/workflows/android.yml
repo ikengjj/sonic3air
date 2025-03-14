@@ -23,4 +23,4 @@ jobs:
       run: chmod +x ./mastering_android.bat
     - name: jsj
       working-directory: ./Oxygen/sonic3air/build/_android
-      run: chmod +x ./gradlew.bat assembleDebug
+      run: chmod +x ./gradlew assembleDebug
