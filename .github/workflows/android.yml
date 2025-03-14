@@ -24,3 +24,9 @@ jobs:
     - name: jsj
       working-directory: ./Oxygen/sonic3air/build/_android
       run: chmod +x ./gradlew
+    - name: Upload artifact Android
+      uses: actions/upload-artifact@v4
+      with:
+        name: v4-android
+        working-directory: ./Oxygen/sonic3air/build
+        path: ./_android/app/build/outputs/apk
