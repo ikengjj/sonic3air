@@ -16,14 +16,16 @@ jobs:
     - name: set up JDK 11
       uses: actions/setup-java@v4
       with:
-        java-version: '17'
+        java-version: '11'
         distribution: 'temurin'
-    - name: jzjk
-      working-directory: ./Oxygen/sonic3air/___internal/mastering
-      run: chmod +x ./mastering_android.bat
-    - name: jsj
+        cache: gradle
+
+    - name: Grant execute permission for gradlew
       working-directory: ./Oxygen/sonic3air/build/_android
-      run: chmod +x ./gradlew build
+      run: chmod +x gradlew
+    - name: Build with Gradle
+      working-directory: ./Oxygen/sonic3air/build/_android
+      run: ./gradlew build
     - name: Upload artifact Android
       uses: actions/upload-artifact@v4
       with:
