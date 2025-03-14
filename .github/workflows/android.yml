@@ -19,4 +19,5 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     - name: Build with Gradle
+      working-directory: ./oxygen/sonic3air/build/_android
       run: ./gradlew.bat assembleDebug --no-daemon -PABIFILTERS="armeabi-v7a;arm64-v8a" -PRETRO_DISABLE_PLUS
