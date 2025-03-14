@@ -19,6 +19,7 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     - name: jsj
+      working-directory: ./Oxygen/sonic3air/build/_android
       run: chmod +x gradlew
     - name: Build with Gradle
       working-directory: ./Oxygen/sonic3air/build/_android
