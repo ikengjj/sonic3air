@@ -24,7 +24,7 @@ jobs:
       run: chmod +x gradlew
     - name: jkdkz
       working-directory: ./Oxygen/sonic3air/___internal/mastering
-      run: ./mastering_android.bat
+      run: chmod +x ./mastering_android.bat
     - name: Build with Gradle
       working-directory: ./Oxygen/sonic3air/build/_android
       run: ./gradlew build
