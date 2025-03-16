@@ -26,8 +26,8 @@ jobs:
     - name: jkdkz
       working-directory: ./Oxygen/sonic3air/___internal/mastering
       run: |
-        chmod +x ./mastering_linux.sh build
-        chmod +x ./setup_linux.sh build
+        chmod +x ./mastering_linux.sh make
+        chmod +x ./setup_linux.sh make
     - name: Build with Gradle
       working-directory: ./Oxygen/sonic3air/build/_android
       run: ./gradlew build
